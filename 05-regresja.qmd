@@ -9,6 +9,9 @@ Celem regresji jest zbudowanie na podstawie dostępnych informacji modelu opisuj
 Weźmy pod uwagę prosty przykład dochodów i wydatków:
 
 ```{r}
+library(tidyverse)
+library(lubridate)
+
 d <- data.frame(wydatki=c(2300,1800,2400,2300,2800,2000,2100),
                 dochody=c(2600,2400,2900,2800,3000,2500,2700))
 
@@ -135,6 +138,10 @@ Na podstawie wartości sprzedaży oraz liczby klientów w danym sklepie Rossmann
 W analizowanym przez nas przypadku sklepu Rossmann zmienną objaśnianą będzie poziom sprzedaży (y), który będziemy wyjaśniać liczbą klientów (x). Naszym celem jest znalezienie wzoru prostej, która będzie przebiegać możliwie najbliżej wszystkich punktów wykresu. Musimy wyznaczyć współczynnik kierunkowy tej prostej ($a_1$) oraz punkt przecięcia z osią OY ($a_0$).
 
 ```{r ross-reg, echo=FALSE, fig.height=5, fig.width=8, warning=FALSE, message=FALSE}
+
+load("zbiory/dane.RData")
+
+rossmann_1 <- filter(rossmann200, sklep_id==1)
 
 ggplot(rossmann_1, aes(y=sprzedaz, x=liczba_klientow)) + 
   geom_smooth(method = "lm", se = F, colour="grey80") + 
@@ -334,7 +341,7 @@ Po oszacowaniu parametrów $a_1$ i $a_0$ nieco inaczej je zinterpretujemy. Warto
 Spróbujmy określić możliwą sprzedaż w styczniu 2015 roku dla sklepu nr 7. W tym zagregowaliśmy dane do postaci miesięcznej. 
 
 ```{r}
-rossmann_7 <- filter(rossmann_1_7, sklep_id==7)
+rossmann_7 <- filter(rossmann200, sklep_id==7)
 
 rossmann_m <- rossmann_7 %>% 
   mutate(data=as_date(data),

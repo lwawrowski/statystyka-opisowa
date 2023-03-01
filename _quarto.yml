@@ -1,0 +1,22 @@
+project:
+  type: book
+
+book:
+  title: "Statystyka opisowa"
+  author: "Łukasz Wawrowski"
+  date: "03/01/2023"
+  chapters:
+    - index.qmd
+    - 01-zbiorowosc.qmd
+    - 02-wizualizacja.qmd
+    - 03-analiza-struktury.qmd
+    - 04-korelacje.qmd
+    - 05-regresja.qmd
+    - 06-sezonowosc.qmd
+    - 07-szereg-dynamiczny.qmd
+    - 08-indeksy.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc-title: "Spis treści"

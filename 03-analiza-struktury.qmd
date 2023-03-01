@@ -40,6 +40,9 @@ Przykładowo, dane są oceny jednego ze studentów: 3, 4, 5, 3+, 2, 4, 3
 
 ```{r srednia, echo=FALSE, fig.height=5, fig.width=8, warning=FALSE, message=FALSE}
 library(e1071)
+library(tidyverse)
+
+load("zbiory/dane.RData")
 
 oceny <- data.frame(lp=factor(x=c(1:7)),
                     oceny=c(3,4,5,3.5,2,4,3))
@@ -593,7 +596,7 @@ Po wyznaczeniu wartości kwartyli pozostałe miary liczymy w tradycyjny sposób.
 
 ### Schemat
 
-![Analiza struktury w zależności od typu szeregu](schemat.png)
+![Analiza struktury w zależności od typu szeregu](img/schemat.png)
 
 ### Miary klasyczne
 

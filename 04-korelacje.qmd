@@ -121,8 +121,11 @@ W odróżnieniu do cech jakościowych, w przypadku cech ciągłych oprócz siły
 Sprawdźmy czy liczba klientów jest skorelowana ze sprzedażą w sklepie nr 1. Pierwszym krokiem w analizie korelacji jest stworzenie wykresu rozrzutu:
 
 ```{r ross-scatter, echo=FALSE, fig.height=5, fig.width=8, warning=FALSE, message=FALSE}
+library(tidyverse)
 
-rossmann_1 <- filter(rossmann_1_7, sklep_id==1)
+load("zbiory/dane.RData")
+
+rossmann_1 <- filter(rossmann200, sklep_id==1)
 
 ggplot(rossmann_1, aes(x=sprzedaz, y=liczba_klientow)) + 
   geom_point() +

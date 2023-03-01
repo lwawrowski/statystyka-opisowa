@@ -1,15 +1,3 @@
----
-title: "Statystyka opisowa"
-author: "Katedra Statystyki"
-site: bookdown::bookdown_site
-documentclass: book
-output:
-  bookdown::gitbook: 
-    includes:
-      in_header: includes.html
-  bookdown::pdf_book: default
----
-
 ```{r pakiety i ustawienia, include=FALSE, warning=FALSE, message=FALSE}
 options(scipen = 100)
 library(openxlsx)
@@ -21,7 +9,7 @@ knitr::opts_chunk$set(cache = TRUE,
 ```
 
 
-# Wprowadzenie {-}
+# Wprowadzenie {.unnumbered}
 
 Niniejszy skrypt stanowi pomoc dydaktyczną do przedmiotów Statystyka oraz Statystyka opisowa. Celem przedmiotu jest poznanie metod statystycznych, ich zastosowań oraz interpretacja otrzymanych wyników. 
 

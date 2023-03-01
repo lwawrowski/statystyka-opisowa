@@ -21,6 +21,8 @@ Zasoby internetowe są pełne przykładów i wzorców tworzenia wykresów:
 # 
 # save(rossmann, rossmann200, file="dane.RData")
 
+library(tidyverse)
+
 load("zbiory/dane.RData")
 
 ```

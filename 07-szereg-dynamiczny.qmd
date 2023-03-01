@@ -3,6 +3,8 @@
 Badanie szeregu dynamicznego umożliwia dokładne określenie zmian jakie zachodzą w kolejnych okresach. Za przykład posłuży sprzedaż piwa w województwie wielkopolskim w kolejnych okresach.
 
 ```{r, echo=FALSE}
+library(tidyverse)
+
 piwa <- readxl::read_xlsx("zbiory/piwa.xlsx")
 
 piwa_wlkp <- piwa %>%
@@ -52,7 +54,7 @@ Przyrosty absolutne o podstawie w maju oraz przyrosty absolutne łańcuchowe prz
 piwa_wlkp %>%
   mutate(Paj=liczba_sztuk-2594,
          Pal=liczba_sztuk-lag(liczba_sztuk,1)) %>%
-  kable
+  knitr::kable()
 
 ```
 
@@ -77,7 +79,7 @@ Przyrosty względne wyrażane są w procentach. Informują o ile wyższy lub ni�
 piwa_wlkp %>%
   mutate(Pwj=round((liczba_sztuk-2594)/2594*100,2),
          Pwl=round((liczba_sztuk-lag(liczba_sztuk,1))/lag(liczba_sztuk,1)*100,2)) %>%
-  kable
+  knitr::kable()
 
 ```
 
@@ -105,7 +107,7 @@ Między przyrostami względnymi a indeksami istnieje ścisły związek. Indeksy 
 piwa_wlkp %>%
   mutate(Ij=round((liczba_sztuk/2594)*100,2),
          Il=round((liczba_sztuk/lag(liczba_sztuk,1))*100,2)) %>%
-  kable
+  knitr::kable()
 
 ```
 
