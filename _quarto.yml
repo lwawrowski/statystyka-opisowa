@@ -1,6 +1,11 @@
 project:
   type: book
 
+execute:
+  echo: false
+  message: false
+  warning: false
+
 book:
   title: "Statystyka opisowa"
   author: "Łukasz Wawrowski"
