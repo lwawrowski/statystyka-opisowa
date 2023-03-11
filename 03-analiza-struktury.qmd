@@ -612,7 +612,7 @@ Po wyznaczeniu wartości kwartyli pozostałe miary liczymy w tradycyjny sposób.
 | Wariancja (dla populacji) | $s^2$ | $\frac{\sum_{i=1}^N (x_i - \bar{x})^2}{N}$ | Informuje o zróżnicowaniu populacji | `WARIANCJA.POP(x)`  |
 | Wariancja (dla próby) | $s^2$ | $\frac{\sum_{i=1}^N (x_i - \bar{x})^2}{N-1}$ | Informuje o zróżnicowaniu próby | `WARIANCJA.PRÓBKI(x)`  |
 | Rozstęp | $R$ | $max(x) - min(x)$ | Empiryczny obszar zmienności, wartość maksymalna cechy x minus wartość minimalna tej cechy  | --  |
-| Typowy obszar zmiennośći |-- | $\bar{x} - s < x_{typ} < \bar{x} + s$ | Informuje o relatywnym zróżnicowaniu populacji (próby). Zwykle wykorzystujemy do porównań dwóch lub więcej grup.  | --  |
+| Typowy obszar zmienności |-- | $\bar{x} - s < x_{typ} < \bar{x} + s$ | Informuje o relatywnym zróżnicowaniu populacji (próby). Zwykle wykorzystujemy do porównań dwóch lub więcej grup.  | --  |
 | Współczynnik zmienności | $V_x$ | $\frac{s}{\bar{x}}$ | Informuje o relatywnym zróżnicowaniu populacji (próby). Zwykle wykorzystujemy do porównań dwóch lub więcej grup. Wyrażamy w procentach.  | --  |
 | Współczynnik asymetrii | $\alpha_3$ | $\frac{\frac{1}{N}\sum_{i=1}^{N}{(x_{i}-\bar{x})^3}}{s^3}$ | Pozwala zidentyfikować czy rozkład jest symetryczny lub asymetryczny | `SKOŚNOŚĆ(x)`  |
 | Współczynnik koncentracji | $\alpha_4$ | $\frac{\frac{1}{N}\sum_{i=1}^{N}{(x_{i}-\bar{x})^4}}{s^4}$ | Pozwala zidentyfikować czy rozkład jest wysmukły czy spłaszczony | `KURTOZA(x)`  |
@@ -632,7 +632,7 @@ Po wyznaczeniu wartości kwartyli pozostałe miary liczymy w tradycyjny sposób.
 
 ## Przedziały ufności
 
-Dotyczas analizowane dane dotyczyły populacji, zatem obliczone wartości statystyk można uznać za precyzyjne i nieobciążone błędem. Natomiast większość prowadzonych badań ogranicza się do analizy jedynie fragmentu populacji. Wówczas, oprócz obliczenia interesującej nas miary ważne jest także podanie możliwego błędu. Popularną praktyką jest obliczanie **przedziałów ufności**, które prezentują zakres, w którym z określonym prawdopodobieństwem znajduje się prawdziwa wartość parametru. Zwykle bierze się pod uwagę następujące prawdopodobieństwa: 90%, 95% i 99%, niemniej można wybrać dowolną wartość z przedziału 0-100%. We wzorach operuje się pojeciem **poziomu istotności** oznaczanym przez $\alpha$. 
+Dotychczas analizowane dane dotyczyły populacji, zatem obliczone wartości statystyk można uznać za precyzyjne i nieobciążone błędem. Natomiast większość prowadzonych badań ogranicza się do analizy jedynie fragmentu populacji. Wówczas, oprócz obliczenia interesującej nas miary ważne jest także podanie możliwego błędu. Popularną praktyką jest obliczanie **przedziałów ufności**, które prezentują zakres, w którym z określonym prawdopodobieństwem znajduje się prawdziwa wartość parametru. Zwykle bierze się pod uwagę następujące prawdopodobieństwa: 90%, 95% i 99%, niemniej można wybrać dowolną wartość z przedziału 0-100%. We wzorach operuje się pojęciem **poziomu istotności** oznaczanym przez $\alpha$. 
 
 Skupimy się na wyznaczaniu następujących przedziałów ufności:
 

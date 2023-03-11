@@ -4,7 +4,7 @@ Metoda regresji wykorzystywana jest do funkcyjnego odwzorowania zależności pom
 
 ## Regresja prosta
 
-Celem regresji jest zbudowanie na podstawie dostępnych informacji modelu opisującego rzeczywistość. Taki model pełni funkcję poznawczą - dostarcza wiedzy na temat zjawiska, a także umożliwa prognozowanie (predykcję) nieznanej wartości analizowanej cechy.
+Celem regresji jest zbudowanie na podstawie dostępnych informacji modelu opisującego rzeczywistość. Taki model pełni funkcję poznawczą - dostarcza wiedzy na temat zjawiska, a także umożliwia prognozowanie (predykcję) nieznanej wartości analizowanej cechy.
 
 Weźmy pod uwagę prosty przykład dochodów i wydatków:
 
